@@ -2046,7 +2046,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin input line
 					(at -25.4 -10.16 0)
 					(length 5.08)
 					(name "D/C/NC/SA0"
@@ -2064,7 +2064,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin passive line
 					(at -25.4 -7.62 0)
 					(length 5.08)
 					(name "R/W/NC"
@@ -2082,7 +2082,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin passive line
 					(at -25.4 -12.7 0)
 					(length 5.08)
 					(name "E/NC"
@@ -2154,7 +2154,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin passive line
 					(at 25.4 0 180)
 					(length 5.08)
 					(name "DB3/NC"
@@ -2172,7 +2172,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin passive line
 					(at 25.4 -2.54 180)
 					(length 5.08)
 					(name "DB4/NC"
@@ -2190,7 +2190,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin passive line
 					(at 25.4 -5.08 180)
 					(length 5.08)
 					(name "DB5/NC"
@@ -2208,7 +2208,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin passive line
 					(at 25.4 -7.62 180)
 					(length 5.08)
 					(name "DB6/NC"
@@ -2226,7 +2226,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin passive line
 					(at 25.4 -10.16 180)
 					(length 5.08)
 					(name "DB7/NC"
@@ -2338,7 +2338,7 @@
 					(at 25.4 -15.24 180)
 					(length 5.08)
 					(hide yes)
-					(name "VSS"
+					(name "GND"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -2520,7 +2520,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "XIAO_RP2040:MOUDLE-SEEEDUINO-XIAO"
+		(symbol "Blip:XIAO_ESP32S3"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2536,7 +2536,7 @@
 					)
 				)
 			)
-			(property "Value" "MOUDLE-SEEEDUINO-XIAO"
+			(property "Value" "Seeed Studio XIAO ESP32-S3"
 				(at -3.81 -11.43 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2579,7 +2579,7 @@
 					)
 				)
 			)
-			(symbol "MOUDLE-SEEEDUINO-XIAO_0_1"
+			(symbol "XIAO_ESP32S3_0_1"
 				(rectangle
 					(start -16.51 10.16)
 					(end 19.05 -10.16)
@@ -2592,11 +2592,11 @@
 					)
 				)
 			)
-			(symbol "MOUDLE-SEEEDUINO-XIAO_1_1"
+			(symbol "XIAO_ESP32S3_1_1"
 				(pin passive line
 					(at -19.05 7.62 0)
 					(length 2.54)
-					(name "PA02_A0_D0"
+					(name "GPIO1_A0_D0"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2614,7 +2614,7 @@
 				(pin passive line
 					(at -19.05 5.08 0)
 					(length 2.54)
-					(name "PA4_A1_D1"
+					(name "GPIO2_A1_D1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2632,7 +2632,7 @@
 				(pin passive line
 					(at -19.05 2.54 0)
 					(length 2.54)
-					(name "PA10_A2_D2"
+					(name "GPIO3_A2_D2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2650,7 +2650,7 @@
 				(pin passive line
 					(at -19.05 0 0)
 					(length 2.54)
-					(name "PA11_A3_D3"
+					(name "GPIO4_A3_D3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2668,7 +2668,7 @@
 				(pin passive line
 					(at -19.05 -2.54 0)
 					(length 2.54)
-					(name "PA8_A4_D4_SDA"
+					(name "GPIO5_A4_D4_SDA"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2686,7 +2686,7 @@
 				(pin passive line
 					(at -19.05 -5.08 0)
 					(length 2.54)
-					(name "PA9_A5_D5_SCL"
+					(name "GPIO6_A5_D5_SCL"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2704,7 +2704,7 @@
 				(pin passive line
 					(at -19.05 -7.62 0)
 					(length 2.54)
-					(name "PB08_A6_D6_TX"
+					(name "GPIO43_A6_D6_TX"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2722,7 +2722,7 @@
 				(pin passive line
 					(at 21.59 -7.62 180)
 					(length 2.54)
-					(name "PB09_A7_D7_RX"
+					(name "GPIO44_A7_D7_RX"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2740,7 +2740,7 @@
 				(pin passive line
 					(at 21.59 -5.08 180)
 					(length 2.54)
-					(name "PA7_A8_D8_SCK"
+					(name "GPIO7_A8_D8_SCK"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2758,7 +2758,7 @@
 				(pin passive line
 					(at 21.59 -2.54 180)
 					(length 2.54)
-					(name "PA5_A9_D9_MISO"
+					(name "GPIO8_A9_D9_MISO"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2776,7 +2776,7 @@
 				(pin passive line
 					(at 21.59 0 180)
 					(length 2.54)
-					(name "PA6_A10_D10_MOSI"
+					(name "GPIO9_A10_D10_MOSI"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3465,16 +3465,8 @@
 		(uuid "e045be20-7308-44ba-97f6-738bf1689447")
 	)
 	(no_connect
-		(at 176.53 121.92)
-		(uuid "0ee5f40f-1bfb-4ec5-8675-8d7b9bac721f")
-	)
-	(no_connect
 		(at 245.11 115.57)
 		(uuid "14f80d7a-a823-47dd-8017-9e67a6023a29")
-	)
-	(no_connect
-		(at 176.53 129.54)
-		(uuid "151ee032-c774-43a0-88fd-70e010900ca2")
 	)
 	(no_connect
 		(at 270.51 135.89)
@@ -3483,10 +3475,6 @@
 	(no_connect
 		(at 270.51 115.57)
 		(uuid "35d868cc-8806-4814-830c-0519f292209a")
-	)
-	(no_connect
-		(at 125.73 134.62)
-		(uuid "39527686-7179-4ed7-b3cb-c1d7045984a5")
 	)
 	(no_connect
 		(at 270.51 113.03)
@@ -3501,28 +3489,12 @@
 		(uuid "52a7e7a6-f9f6-4755-ba4c-5a82765fbc89")
 	)
 	(no_connect
-		(at 176.53 124.46)
-		(uuid "5da7ffc7-1930-4722-84c8-5c6be4c1211c")
-	)
-	(no_connect
-		(at 176.53 132.08)
-		(uuid "60122baf-09d6-4375-873a-2a1c3f38dddb")
-	)
-	(no_connect
 		(at 212.09 62.23)
 		(uuid "649dafe6-ef49-4cac-946d-76a06288bfb4")
 	)
 	(no_connect
 		(at 245.11 118.11)
 		(uuid "7606af1e-f7ab-43af-b7e8-d0e2411e3c96")
-	)
-	(no_connect
-		(at 176.53 127)
-		(uuid "8c7770c2-71cb-4d5d-a51c-f04c2a09c75b")
-	)
-	(no_connect
-		(at 125.73 132.08)
-		(uuid "941c528b-7e27-45cb-9a90-e03a5c8ebda8")
 	)
 	(no_connect
 		(at 270.51 133.35)
@@ -3543,10 +3515,6 @@
 	(no_connect
 		(at 270.51 110.49)
 		(uuid "cc56cbbb-970c-4d70-b04d-2bb570437d28")
-	)
-	(no_connect
-		(at 125.73 129.54)
-		(uuid "dc729c8f-1277-4ee1-b30e-5c7e1dfd2c13")
 	)
 	(no_connect
 		(at 270.51 138.43)
@@ -3668,16 +3636,6 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 114.3) (xy 119.38 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5d5c0044-b992-4364-8b92-1b54e261a836")
-	)
-	(wire
-		(pts
 			(xy 86.36 111.76) (xy 100.33 111.76)
 		)
 		(stroke
@@ -3768,16 +3726,6 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 114.3) (xy 119.38 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd5a2c20-66c1-46a4-8b5a-e234eb43c967")
-	)
-	(wire
-		(pts
 			(xy 76.2 69.85) (xy 76.2 87.63)
 		)
 		(stroke
@@ -3825,6 +3773,63 @@
 			(justify left bottom)
 		)
 		(uuid "0343c820-7e80-4572-9ca0-e71e39b886a4")
+	)
+	(label "+3.3V"
+		(at 125.73 114.3 180)
+		(effects
+			(font (size 1.27 1.27))
+			(justify right bottom)
+		)
+		(uuid "f4a32b66-912d-4bba-9768-9d3710f54ea9")
+	)
+	(label "+3.3V"
+		(at 125.73 132.08 180)
+		(effects
+			(font (size 1.27 1.27))
+			(justify right bottom)
+		)
+		(uuid "c9c4922e-49dc-4f6b-957f-608d16ca24d1")
+	)
+	(label "GND"
+		(at 125.73 129.54 180)
+		(effects
+			(font (size 1.27 1.27))
+			(justify right bottom)
+		)
+		(uuid "f1c0ee52-e195-4ec4-a217-d25938997b87")
+	)
+	(label "GND"
+		(at 125.73 134.62 180)
+		(effects
+			(font (size 1.27 1.27))
+			(justify right bottom)
+		)
+		(uuid "ec48e480-0692-4b68-b3be-4f9d467406b3")
+	)
+	(label "GND"
+		(at 176.53 121.92 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "53d6508d-dc75-4a24-b6e4-a68490cb9b58")
+	)
+	(label "GND"
+		(at 176.53 124.46 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "ead43bb6-2a47-42c3-8ed3-60a7ed55c36a")
+	)
+	(label "GND"
+		(at 176.53 127 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "d142a2fb-4e95-44fa-bb86-c51189e7e8af")
+	)
+	(label "GND"
+		(at 176.53 129.54 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "110bd03a-9bb1-4607-8da3-41d6ecac93ee")
+	)
+	(label "GND"
+		(at 176.53 132.08 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "883c07d9-6d61-4022-a81c-ded0ff4f2795")
 	)
 	(label "SDA"
 		(at 176.53 116.84 0)
@@ -5161,7 +5166,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
+		(lib_id "power:GND")
 		(at 176.53 109.22 270)
 		(unit 1)
 		(body_style 1)
@@ -5183,7 +5188,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.3V"
+		(property "Value" "GND"
 			(at 180.34 109.2199 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5216,7 +5221,7 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+		(property "Description" "Power symbol creates a global label with name \"GND\", ground"
 			(at 176.53 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -5915,88 +5920,6 @@
 			(project "Hackpad"
 				(path "/b2ddfd41-41d8-40fc-950a-0913a8703706"
 					(reference "D7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 119.38 109.22 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4da1a20e-6c49-4308-83f0-cf9bb4f3b07d")
-		(property "Reference" "R3"
-			(at 121.92 107.9499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 121.92 110.4899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 117.602 109.22 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 119.38 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 119.38 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "abb40500-f4a7-4369-8834-054b699e66b4")
-		)
-		(pin "2"
-			(uuid "14cfd860-4473-4a34-b0cc-dffed41cccee")
-		)
-		(instances
-			(project "Hackpad"
-				(path "/b2ddfd41-41d8-40fc-950a-0913a8703706"
-					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -7555,84 +7478,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 119.38 105.41 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "93f158ae-4808-45e4-9c29-712816534a56")
-		(property "Reference" "#PWR023"
-			(at 119.38 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 119.38 100.33 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 119.38 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 119.38 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 119.38 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "cba9f0f6-c681-4c1f-8f27-fcd4676c7fbf")
-		)
-		(instances
-			(project "Hackpad"
-				(path "/b2ddfd41-41d8-40fc-950a-0913a8703706"
-					(reference "#PWR023")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Switch:SW_Push")
 		(at 41.91 104.14 0)
 		(unit 1)
@@ -7933,7 +7778,7 @@
 		)
 	)
 	(symbol
-		(lib_id "XIAO_RP2040:MOUDLE-SEEEDUINO-XIAO")
+		(lib_id "Blip:XIAO_ESP32S3")
 		(at 231.14 54.61 0)
 		(unit 1)
 		(body_style 1)
@@ -7954,7 +7799,7 @@
 				)
 			)
 		)
-		(property "Value" "MOUDLE-SEEEDUINO-XIAO"
+		(property "Value" "Seeed Studio XIAO ESP32-S3"
 			(at 232.41 41.91 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7964,7 +7809,7 @@
 				)
 			)
 		)
-		(property "Footprint" "RF_Module:MCU_Seeed_ESP32C3"
+		(property "Footprint" "Blip:XIAO_ESP32S3_Socket"
 			(at 214.63 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -7975,7 +7820,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/"
 			(at 214.63 52.07 0)
 			(hide yes)
 			(show_name no)

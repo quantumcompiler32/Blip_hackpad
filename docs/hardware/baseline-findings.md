@@ -37,4 +37,4 @@ The hashes match Moksh's active external project at migration time, proving that
 | Mechanical review and fresh STEP | Not performed |
 | Human manufacturing approval | Not granted |
 
-Next work is ticket 02, applying the smallest evidence-backed controller, power, and display corrections.
+Ticket 02 applied the smallest evidence-backed controller, socket, power, and Newhaven I2C corrections while preserving the matrix, component placement, and existing routed nets. U1's two rows moved inward 0.88 mm to match Seeed's official 15.24 mm spacing. The baseline hashes above remain migration evidence only. Fresh DRC/parity, mechanical review, and human approval remain ticket-03 gate work.

@@ -1,8 +1,8 @@
 # Blip revision-one pin-map contract
 
-Status: **header/GPIO contract agreed; KiCad controller identity requires correction in ticket 02**.
+Status: **ticket-02 electrical contract applied; fresh KiCad gate verification remains required**.
 
-The required Blip Controller is the Seeed Studio XIAO ESP32-S3. Header-to-GPIO identities come from Seeed Studio's official XIAO ESP32-S3 pin map: <https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/>. The current KiCad symbol uses obsolete SAMD/RP2040-style MCU pin names and an ESP32-C3 footprint name; ticket 02 must replace those identities without changing the agreed pad positions.
+The required Blip Controller is the Seeed Studio XIAO ESP32-S3. Header-to-GPIO identities come from Seeed Studio's official XIAO ESP32-S3 pin map: <https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/>. Ticket 02 replaced the obsolete controller identities with an embedded ESP32-S3 symbol and a 14-contact, 2.54 mm through-hole socket footprint. The official 15.24 mm row spacing moved each baseline row inward 0.88 mm; functional nets and their route endpoints were preserved.
 
 | XIAO header | ESP32-S3 GPIO | Board net | Blip role | Contract state |
 | --- | --- | --- | --- | --- |
@@ -17,7 +17,7 @@ The required Blip Controller is the Seeed Studio XIAO ESP32-S3. Header-to-GPIO i
 | D8 | GPIO7 | `ENC_SW` | Right encoder press | Agreed; later net name `RIGHT_ENC_SW` |
 | D9 | GPIO8 | `ENC_A` | Right encoder A | Agreed; later net name `RIGHT_ENC_A` |
 | D10 | GPIO9 | `ENC_B` | Right encoder B | Agreed; later net name `RIGHT_ENC_B` |
-| 3V3 | 3V3_OUT | `+3.3V` | Logic and display supply | Agreed; current budget remains open |
+| 3V3 | 3V3_OUT | `+3.3V` | Logic and display supply | Agreed; preliminary external maximum is 170.8 mA |
 | GND | GND | `GND` | Common return | Agreed |
 | 5V | VBUS | Unconnected | Not used | Required by USB-C-only power decision |
 
@@ -29,10 +29,12 @@ The expander is on the shared I2C bus at `0x20`, with address pins A0–A2 groun
 
 | Component | Address | Supply | Bus role | Baseline status |
 | --- | --- | --- | --- | --- |
-| MCP23017 | `0x20` | 3.3 V | Matrix GPIO | Address agrees |
-| DM-OLED096-636 | `0x3C` | 3.3 V | Persistent Status | Address is a locked requirement; physical strap/pull-ups remain to verify |
-| NHD-0420CW-AB3 | `0x3D` | 3.3 V | Contextual Status | Locked requirement; SA0 and control-level corrections remain ticket 02 |
+| MCP23017 | `0x20` | 3.3 V | Matrix GPIO | A0–A2 grounded; address agrees |
+| DM-OLED096-636 | `0x3C` | 3.3 V | Persistent Status | Manufacturer-default fixed address verified |
+| NHD-0420CW-AB3 | `0x3D` | 3.3 V | Contextual Status | SA0 tied to 3.3 V; address agrees |
 
-The graphical OLED connector is currently GND, 3.3 V, SCL, SDA on pins 1–4. The Newhaven baseline connects pin 1 VSS to GND; pin 2 VDD to 3.3 V; pin 3 REGVDD to 3.3 V; pin 7 SCL to SCL; pins 8 SDAIN and 9 SDAOUT to SDA; pin 16 RES through a 10 kΩ pull-up; pin 17 BS0 to GND; pin 18 BS1 to 3.3 V; pin 19 BS2 to GND; and hidden pin 20 VSS to GND. Pins 4–6 and 10–15 are unconnected in the baseline. These are observed connections, not approval: REGVDD, address selection, reset, interface selection, and unused-pin treatment remain explicit ticket-02 corrections/checks.
+The graphical OLED connector is GND, 3.3 V, SCL, SDA on pins 1–4. Its module includes 4.7 kΩ pull-ups; together with R1/R2 this gives about 2.35 kΩ effective pull-up resistance. The Newhaven now connects VSS pins 1/20 to GND, VDD pin 2 to 3.3 V, REGVDD pin 3 to GND, SA0 pin 4 to 3.3 V, I2C NC pins 5–6 and 10–15 to GND, pin 7 to SCL, pins 8/9 together to SDA, /RES pin 16 directly to 3.3 V, BS0/BS2 pins 17/19 to GND, and BS1 pin 18 to 3.3 V. This selects 3.3 V I2C operation and address `0x3D`. Direct reset-high replaced the baseline R3 pull-up because R3 had no PCB footprint and no controlled reset is required.
+
+The preliminary maximum external 3.3 V load is 170.8 mA: 135 mA Newhaven, 32 mA graphical OLED, 1 mA MCP23017, and 2.8 mA with both I2C lines low through the effective pull-ups. See [component research](component-research.md) for primary sources and limitations. The 700 mA Seeed regulator-output statement leaves nominal margin, but radio/CPU peaks, thermal behavior, bus rise time, display brightness, and assembled measurements remain Hardware Validation Gate checks.
 
 USB-C on the XIAO is the only power input and carries USB HID plus serial. No project path, secret, or host configuration crosses this hardware contract.
