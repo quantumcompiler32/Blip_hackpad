@@ -1,0 +1,19 @@
+Hardware Validation Gate — 2026-07-21
+KiCad GUI DRC: 0 violations
+KiCad GUI unconnected items: 0
+KiCad GUI schematic parity: 0 (operator-attested; see drc-parity.png)
+KiCad CLI ERC: 0 errors, 0 warnings
+Source revision baseline for before image: e0d795d
+
+SHA-256 source/artifact binding:
+f79d08c769c496a55742e05853f6230a7aeb586b1f47ecbe2a25918c5321c711  PCB/Hackpad.kicad_pcb
+0e567b836aea6845e7e5a3d91c0b53fd1ea921ee4473b3919087f548ef2fc913  PCB/Hackpad.kicad_sch
+cbebbfc431b908c46b2509805ab4363082077aea9656cf4717e7243385285020  PCB/Blip.pretty/XIAO_ESP32S3_Socket.kicad_mod
+d8c1aa42e53af8127d99fc2cb34fe868f9aad859bb383313cd3f733fd328e3e2  PCB/Hackpad.kicad_pro
+7b270faf3ec9d4e021f46e35a76ad9c187889cf0fbb7587f1ed069805860d662  docs/hardware/evidence/erc.rpt
+fa44ee15d3d5dc96c8e182c97d8db4636f09b909d99e3f42596480024264b644  docs/hardware/evidence/drc.rpt
+db56be55e5ca103b130b174c5da5bb912b6725b731ce665d24db473a1cfad1a7  CAD/Blip-PCB-Assembly.step
+eaac2ac2d055971c2f96e0fb33dd5323bb6a367071d8f35fd2c99b1d09541593  docs/hardware/evidence/board-before-e0d795d.svg
+ff2ff135aca204d3e87a5e7aebb78241627b427e5889ee19a3bfebfb601265ab  docs/hardware/evidence/board-after.svg
+21f75690a5a846b8f900e2aba97654dba9be4a542974d0e4ac656791a6958696  docs/hardware/evidence/drc-parity.png
+2d0f5199790c76a218b8ae0d182e174bc43df0ef02278d77c1046696d1484534  docs/hardware/evidence/before-after-annotated.svg

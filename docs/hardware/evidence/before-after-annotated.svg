@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="250mm" height="170mm" viewBox="0 0 250 170">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#e5484d"/></marker>
+    <style>.title{font:700 5px sans-serif;fill:#111}.label{font:700 4px sans-serif;fill:#e5484d}.note{font:3.2px sans-serif;fill:#333}.arrow{stroke:#e5484d;stroke-width:1;fill:none;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect width="250" height="170" fill="#f7f7f5"/>
+  <text x="5" y="8" class="title">BEFORE — e0d795d</text>
+  <text x="130" y="8" class="title">AFTER — validated routing</text>
+  <image x="5" y="12" width="115.2398" height="130.7338" xlink:href="board-before-e0d795d.svg"/>
+  <image x="130" y="12" width="115.2398" height="130.7338" xlink:href="board-after.svg"/>
+  <text x="132" y="149" class="label">A — official XIAO pads</text>
+  <text x="132" y="154" class="note">1.524 mm pads / 0.889 mm drills; routes now land on true centers.</text>
+  <path d="M154,146 C166,132 178,70 181,55" class="arrow"/>
+  <text x="132" y="160" class="label">B — stale display-power segment removed</text>
+  <path d="M190,157 C201,133 203,88 197,63" class="arrow"/>
+  <text x="5" y="149" class="label">C — localized SDA / ENC_D reroute</text>
+  <text x="5" y="154" class="note">Only the dense controller/display corridor changed; outline, keys and mounting stay fixed.</text>
+  <path d="M62,146 C89,126 102,82 104,60" class="arrow"/>
+  <rect x="3" y="3" width="244" height="164" fill="none" stroke="#bbb" stroke-width="0.4"/>
+</svg>
