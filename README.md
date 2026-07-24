@@ -39,27 +39,3 @@ Blip_hackpad/
 └── README.md   Project overview
 ```
 
-Add future code and software files under `Firmware/`, BOM files under `BOM/`, pictures
-under `Images/`, and all KiCad/Gerber/PCB-related files under `PCB/`.
-
-## Build Media
-
-- [`Images/PCBSchematic.png`](./Images/PCBSchematic.png)
-- [`Images/PCBFront.png`](./Images/PCBFront.png)
-- `Images/build-1.png`
-- `Images/build-2.png`
-
-## Firmware
-
-PlatformIO firmware is included for the XIAO ESP32-S3. It provides USB HID,
-three flash-backed profiles, volume/mute and profile encoder controls, both OLED
-interfaces, I2C diagnostics, and configuration over USB serial. It uses neither
-Wi-Fi nor Bluetooth.
-
-Open `Firmware/` as the PlatformIO project. See
-[`Firmware/README.md`](./Firmware/README.md) for flashing instructions and
-important PCB corrections required for the Newhaven display.
-
-## License
-
-Add a `LICENSE` file when you decide how you want others to use this work.
