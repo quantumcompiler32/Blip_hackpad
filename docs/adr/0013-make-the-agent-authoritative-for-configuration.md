@@ -1,0 +1,3 @@
+# Make the Agent authoritative for configuration
+
+The Blip Agent’s SQLite database is the authoritative source for Blip Configuration, while Control Center edits it through validated commands and JSON import/export serves only as portable backup and interchange. The Blip Device stores hardware settings, current profile, protocol version, and Offline Control settings, synchronizing device-relevant revisions with the Agent on connection. Integration credentials and sessions remain in macOS Keychain and are omitted from SQLite exports; service credentials, project paths, and Codex or Git configuration are never sent to firmware.

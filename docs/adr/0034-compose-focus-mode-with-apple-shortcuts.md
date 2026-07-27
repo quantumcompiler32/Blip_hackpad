@@ -1,0 +1,3 @@
+# Compose Focus Mode with Apple Shortcuts
+
+Blip Focus Mode composes Pomodoro, the configured Active Media Source, workspace opening, and an optional named Apple Shortcut that enables or disables the chosen macOS Focus/DND state. A Control Center setup assistant explains the required Shortcut, opens Shortcuts at the relevant step, records the selected name, tests execution, and verifies or reports the result. Blip does not use private APIs, UI scraping, or undocumented system-database edits; missing or failed DND automation is reported as a partial failure without preventing other Focus Mode steps, repeated runs avoid duplicate apps or timers, and every sub-action is audited.

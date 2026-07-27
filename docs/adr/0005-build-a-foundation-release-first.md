@@ -1,0 +1,3 @@
+# Build a Foundation Release first
+
+Blip’s first milestone is a Foundation Release proving the complete device-to-Agent-to-Control-Center loop before Spotify, Telegram, Coding/Codex, Research, and Feature Forge are added as later vertical slices. It includes the bundled macOS components, serial handshake, physical and simulated input through one event pipeline, three profiles and Fixed Controls, configurable actions and persistence, Pomodoro, both display roles and animation, basic macOS actions, logs, and permission guidance. This sequences rather than removes the remaining product scope and creates a usable hardware-backed base on which integrations can be tested independently.

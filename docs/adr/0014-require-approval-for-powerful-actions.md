@@ -1,0 +1,3 @@
+# Require approval for powerful actions
+
+Blip treats imported configuration and newly configured commands as untrusted: import validates and previews but never executes. Commands use explicit executable and argument definitions where practical, operate within approved project roots, expose dry-run/test behavior, and require Control Center approval before a newly added risky action can be triggered physically. Destructive or externally visible operations require confirmation, force-push and auto-merge are unavailable in revision one, Feature Forge shows the diff and passes configured checks before commit, credentials are redacted from prompts and logs, and every execution creates a structured audit record.

@@ -1,0 +1,3 @@
+# Use code-defined versioned action types
+
+Blip revision one has no downloadable or JSON-injected executable plugins. Each code-defined action type declares a stable ID, category, versioned argument schema, defaults, validation, dry-run description, executor, permissions, display messages, and documentation; Profile mappings store configured instances that reference those definitions. Configuration migrations are transactional with backup and rollback, unknown imported action types are preserved but disabled and visible, and new executable types require code, tests, and docs. Foundation actions and later integrations use the same registry boundary.

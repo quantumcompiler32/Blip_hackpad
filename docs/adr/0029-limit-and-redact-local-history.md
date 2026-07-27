@@ -1,0 +1,3 @@
+# Limit and redact local history
+
+Operational logs rotate after 30 days or 100 MB by default, whichever comes first, and redact credentials, authorization data, phone numbers, clipboard and captured-page contents, and sensitive query parameters. Explicit Codex and Feature Forge runs may retain their prompts and command output, with Feature Forge audits preserved until the user archives or deletes them. Telegram cache, Research captures, operational logs, and audit records have separate storage controls; cache clearing never removes configuration or audits, destructive clearing explains its scope, diagnostic exports are redacted and previewed, and Control Center reports storage by category.

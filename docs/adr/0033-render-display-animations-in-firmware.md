@@ -1,0 +1,3 @@
+# Render display animations in firmware
+
+The Blip Agent sends compact semantic display scenes containing text, icons, progress, status, and built-in animation identifiers rather than streaming frames. Firmware owns animation timing, offline scenes, and display-specific rendering; it supports direct text lines for diagnostics and compatibility, falls back to static content for unknown animations, and synchronizes speed and reduced-motion preferences. The graphical OLED uses pixel motion while the character OLED uses adapter-supported custom glyphs and text transitions, and protocol tests enforce message-size and update-rate limits.

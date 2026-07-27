@@ -1,0 +1,3 @@
+# Divide input ownership across HID and serial
+
+Offline Controls execute directly in firmware as USB HID and are also reported to the Blip Agent for observation, but the Agent never executes them a second time. The right encoder owns volume and play/pause as Offline Controls. SW11 changes the device-owned profile and reports it; SW12, both left-encoder inputs, and profile-dependent switches are executed only by the Agent. Device and Agent communicate through versioned newline-delimited JSON with handshake heartbeats, monotonic sequence numbers, acknowledgements where needed, device-relative timestamps, and safe handling of malformed or unknown messages. Simulator input enters through the same Agent-side device-event boundary as physical serial input.

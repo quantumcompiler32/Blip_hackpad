@@ -1,0 +1,3 @@
+# Use Arc-first explicit Research capture
+
+Arc is Blip’s primary browser. Foundation Research capture occurs only from an explicit user action and uses Arc’s copy-current-tab shortcuts to obtain a URL and recoverable title/link representation, temporarily reading and then restoring prior clipboard contents where possible. Optional local screenshot and Vision OCR require Screen Recording permission. Partial metadata is saved with a clear explanation when access fails, while full-page extraction is deferred to an optional Chromium-compatible Blip extension with explicit per-site permission; Chrome and other browsers remain later adapters.

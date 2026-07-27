@@ -1,0 +1,3 @@
+# Isolate Telegram user access
+
+Telegram music is a later vertical slice implemented through a dedicated Node MTProto sidecar supervised exclusively by the Blip Agent. It authenticates a user account with user-provided API credentials, verification, and optional 2FA; stores its encrypted session through macOS Keychain; accesses only one explicitly selected chat; indexes playable media and minimal sorting/cache metadata; and downloads into a clearable on-demand cache. It has no product authority to send or edit messages, invite users, or perform unrelated account actions, and disconnect removes local authorization. The Foundation Release uses mocks.

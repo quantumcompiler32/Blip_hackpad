@@ -1,0 +1,3 @@
+# Centralize display priority
+
+The Blip Agent composes semantic display state through one priority system: hardware or safety errors, alarms and confirmations, active progress, Context Browser selection, normal Profile status, then Ambient Status and decoration. The small display reserves Pomodoro and Active Media Source regions, while the large display carries contextual menus, progress, results, and errors. Temporary states declare priority, expiry, and replacement behavior; errors await acknowledgement, success expires, rapid events coalesce, firmware adapters render the semantic state, simulator uses identical timing, and reduced motion removes nonessential animation.

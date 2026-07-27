@@ -1,0 +1,3 @@
+# Support non-Premium Spotify locally
+
+Because Moksh does not currently have Spotify Premium and Spotify Web API playback control requires it, Blip’s initial Spotify integration stores editable playlist URLs or URIs, opens them in the installed Spotify app, and relies on macOS media controls and available Now Playing metadata without promising automatic playback. The full PKCE Web API provider remains modular but disabled or mocked until a Premium account is available, at which point it may add device selection, playlist browsing, current-track metadata, and direct playback. The Foundation Release requires no Spotify credentials and never invents unavailable track information.

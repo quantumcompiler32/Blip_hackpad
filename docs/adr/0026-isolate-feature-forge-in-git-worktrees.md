@@ -1,0 +1,3 @@
+# Isolate Feature Forge in Git worktrees
+
+Feature Forge never modifies the user’s current working tree. It validates the selected Git repository and base branch, creates a collision-resistant `feature/<slug>-<short-id>` branch in an isolated worktree under Blip application support, writes the feature request and runs Codex and checks only there, then shows the complete diff. Commit requires passing checks and user approval; push and draft-PR creation require a second explicit approval, while force-push and auto-merge remain unavailable. Failed worktrees are preserved for inspection, successful ones are removed only by user-selected cleanup, and existing uncommitted work remains untouched.

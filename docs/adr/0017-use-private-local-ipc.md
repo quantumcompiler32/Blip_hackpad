@@ -1,0 +1,3 @@
+# Use private local IPC
+
+Control Center communicates with the bundled Rust Blip Agent through a versioned Unix-domain socket in Blip’s private application-support directory rather than a TCP port or local web server. Filesystem permissions restrict access to the current macOS user. The Agent owns SQLite, serial communication, action execution, and long-running state; Control Center may close or disconnect without stopping it and provides visible restart and diagnostic recovery when the Agent is unavailable. The login-item and IPC lifecycle is prototyped early because it is a high-risk packaging boundary.

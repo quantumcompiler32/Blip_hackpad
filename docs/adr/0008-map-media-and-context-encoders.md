@@ -1,0 +1,3 @@
+# Map media and context encoders
+
+The physical right encoder rotates for macOS volume and presses for play/pause, both implemented as Offline Controls; mute is not reserved and may be assigned elsewhere. The physical left encoder’s rotation and press are both configurable profile-dependent controls executed by the Blip Agent. Its default Context Browser previews profile-relevant choices on rotation and activates only the highlighted choice on press, returns to normal status after a configurable timeout, and can be replaced or disabled per profile. Firmware and documentation use `LEFT_*` and `RIGHT_*` naming rather than schematic net letters, and each encoder has a direction-inversion setting so clockwise behavior can be corrected without rerouting the PCB.

@@ -1,0 +1,3 @@
+# Preserve human authorship for program submissions
+
+Blip’s Macondo and Stardance submissions use one reproducible repository evidence package, but Moksh remains the project’s author and final decision-maker. Codex may audit, explain, propose, and implement technical changes, while every hardware change is documented well enough for Moksh to understand and personally verify in KiCad. Journals are written by Moksh in his own words with authentic screenshots, photos, and tracked work; no hours are double-counted between programs and no journals, evidence, or authorship claims are fabricated. The submission discloses continuation across programs where required and includes complete source files, firmware, BOM, README, visuals, and validation evidence.

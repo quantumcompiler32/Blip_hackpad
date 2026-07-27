@@ -1,0 +1,3 @@
+# Optimize LLM token use
+
+Blip gives Codex focused task files containing only the request, acceptance criteria, constraints, and relevant paths; it relies on repository instructions, specs, and tickets rather than repeatedly embedding the repo or master prompt. Separate tasks default to fresh narrow runs, planning and retries are never automatic, outputs are concise and structured, reported input/cached/output usage is visible, and optional per-run budget warnings are supported. Research makes no AI call without explicit request, while validation, formatting, command construction, state machines, and other deterministic work remain local. Token savings never remove required correctness, security, or verification work.

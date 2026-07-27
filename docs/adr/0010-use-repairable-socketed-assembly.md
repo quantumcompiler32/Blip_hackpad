@@ -1,0 +1,3 @@
+# Use repairable socketed assembly
+
+Blip hardware revision one is hand-assembled and keeps its high-value or programmable components removable: the XIAO ESP32-S3 uses female headers, the MCP23017 uses a DIP socket, and both displays use removable headers or connectors. Switches, diodes, encoders, passives, and connectors are soldered normally. The BOM includes the exact sockets and headers, while the layout, STEP export, and Hardware Change Guide verify pin-one and connector orientation, installed height, USB-C access, mechanical clearance, left/right encoder labels, and display/I²C silkscreen markings.
