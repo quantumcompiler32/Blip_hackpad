@@ -18,4 +18,3 @@ class CharacterOled {
   uint8_t i2cAddress = 0;
   bool available = false;
 };
-

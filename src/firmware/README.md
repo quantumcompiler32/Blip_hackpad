@@ -1,6 +1,7 @@
 # Blip firmware
 
-This folder is a self-contained PlatformIO project. Source files are in `src/`,
+This folder is a self-contained PlatformIO project under the repository's
+authoritative `src/` source root. Firmware files are in this project's `src/`,
 headers are in `include/`, and the build configuration is `platformio.ini`.
 
 ## Controls
@@ -16,7 +17,7 @@ USB serial without rebuilding the firmware. Wi-Fi and Bluetooth are disabled.
 
 1. Install [Visual Studio Code](https://code.visualstudio.com/) and the
    PlatformIO extension.
-2. Open the repository's `Firmware` folder as the PlatformIO project.
+2. Open the repository's `src/firmware` folder as the PlatformIO project.
 3. Connect the XIAO ESP32-S3 by USB.
 4. Run **PlatformIO: Upload**.
 5. Open the serial monitor at 115200 baud for diagnostics.
@@ -24,7 +25,7 @@ USB serial without rebuilding the firmware. Wi-Fi and Bluetooth are disabled.
 Command-line users can run:
 
 ```sh
-cd Firmware
+cd src/firmware
 pio run
 pio run --target upload
 pio device monitor

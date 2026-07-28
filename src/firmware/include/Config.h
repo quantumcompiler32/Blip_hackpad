@@ -29,4 +29,3 @@ class ConfigStore {
   void loadDefaults();
   Preferences preferences;
 };
-

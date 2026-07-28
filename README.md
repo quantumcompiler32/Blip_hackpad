@@ -32,10 +32,30 @@ A macropad project it has a 3x4 key matrix, rotary encoder input, and a 20x4 OLE
 
 ```text
 Blip_hackpad/
-├── BOM/        Bill of materials
-├── Images/     Schematic, PCB, and build pictures
-├── PCB/        KiCad design files and manufacturing outputs
-├── Firmware/   Complete PlatformIO project, source code, headers, and docs
-└── README.md   Project overview
+├── BOM/                Bill of materials
+├── Images/             Schematic, PCB, and build pictures
+├── PCB/                KiCad design files and manufacturing outputs
+├── docs/               Architecture, specifications, and validation evidence
+├── src/
+│   ├── blip-agent/     Background host event pipeline
+│   ├── control-center/ Minimal diagnostic view
+│   ├── firmware/       Complete PlatformIO project
+│   ├── shared/         Device-event and semantic-state contracts
+│   └── simulator/      Virtual Blip Device and scenario CLI
+└── test/               Foundation acceptance tests
 ```
 
+## Simulator tracer scenario
+
+Node.js 22.6 or newer can run the Foundation tracer without installing
+dependencies:
+
+```sh
+npm test
+npm run --silent scenario
+npm run --silent scenario:view > /tmp/blip-control-center-diagnostic.html
+```
+
+The scenario command emits machine-readable JSON. The HTML command renders the
+same Agent observation as a minimal Control Center diagnostic view. Both outputs
+label the device as virtual, and the scenario never executes a host action.

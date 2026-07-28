@@ -1,0 +1,13 @@
+{
+  "name": "blip-foundation",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-strip-types --test",
+    "scenario": "node --experimental-strip-types src/simulator/scenario-cli.ts --format json",
+    "scenario:view": "node --experimental-strip-types src/simulator/scenario-cli.ts --format html"
+  },
+  "engines": {
+    "node": ">=22.6"
+  }
+}
