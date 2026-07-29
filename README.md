@@ -1,6 +1,9 @@
-# Blip_hackpad
+# Blip
 
-A macropad project it has a 3x4 key matrix, rotary encoder input, and a 20x4 OLED display.
+Blip is a custom macropad I am designing for macOS. It combines a 4-row by
+3-column mechanical-key matrix, two rotary encoders, a XIAO ESP32-S3, and two
+displays. The goal is to make a small physical control surface that can trigger
+useful actions and show status without feeling like a tiny touchscreen.
 
 ## Features
 
@@ -9,31 +12,28 @@ A macropad project it has a 3x4 key matrix, rotary encoder input, and a 20x4 OLE
 - Seeed Studio XIAO ESP32-S3 controller for native USB HID
 - MCP23017 I2C GPIO expander for additional IO
 - Newhaven 20x4 character OLED display
-- 2 rotary encoder support in hardware design
+- Two rotary encoders with push switches
+- USB-C-only power through the removable XIAO module
+- A removable MCP23017 GPIO expander and removable display connections
 
-## Bill of Materials (BOM)
+## Bill of materials
 
-| Name | Purpose | Qty | Unit Cost (USD) | Total Cost (USD) | Distributor | Manufacturer | MPN |
-|---|---|---:|---:|---:|---|---|---|
-| Seeed Studio XIAO ESP32-S3 | Native USB HID microcontroller | 1 | 7.49 | 7.49 | DigiKey | Seeed Studio | 113991114 |
-| Newhaven 20x4 Character OLED Display | Primary 20x4 character display | 1 | 36.27 | 36.27 | DigiKey | Newhaven Display International | NHD-0420CW-AB3 |
-| 0.96-inch 128x64 I2C OLED Module | Secondary compact graphics display | 1 | 4.90 | 4.90 | DisplayModule | DisplayModule | DM-OLED096-636 |
-| MCP23017 16-bit I2C GPIO Expander, SPDIP-28 | Expands available GPIO pins | 1 | 1.69 | 1.69 | DigiKey | Microchip Technology | MCP23017-E/SP |
-| Alps Alpine EC11E Rotary Encoder with Push Switch | Rotary input controls | 2 | 5.00 | 10.00 | DigiKey | Alps Alpine | EC11E09244AQ |
-| Cherry MX PCB-mount Mechanical Keyswitch | 3x4 key matrix switches | 12 | 1.75 | 21.00 | DigiKey | Cherry Americas | MX2A-E1NW |
-| 1N4148 Through-hole Switching Diode | Prevents matrix ghosting | 12 | 0.10 | 1.20 | DigiKey | onsemi | 1N4148 |
-| 4.7 kΩ 1% 0805 Resistor | I2C pull-up resistors | 2 | 0.10 | 0.20 | DigiKey | YAGEO | RC0805FR-074K7L |
-| 10 kΩ 1% 0805 Resistor | Display/control pull-up resistor | 1 | 0.10 | 0.10 | DigiKey | YAGEO | RC0805FR-0710KL |
-| 100 nF 50 V X7R 0805 Ceramic Capacitor | 3.3V decoupling | 1 | 0.11 | 0.11 | DigiKey | YAGEO | CC0805KRX7R9BB104 |
+The full, quoted CSV is in [`BOM/Hackpad_final_BOM.csv`](./BOM/Hackpad_final_BOM.csv).
+It matches the current PCB: 12 keys, 12 diodes, two encoders, two 4.7 kΩ
+pull-ups, one 100 nF capacitor, the XIAO ESP32-S3, the MCP23017, and both
+display modules. The removable socket and header parts are listed separately
+because they are assembly parts rather than separate KiCad footprints.
 
-> Full BOM: [`BOM/Hackpad_final_BOM.csv`](./BOM/Hackpad_final_BOM.csv).
+The current component total is **$97.95 USD** using the listed prices. That
+number does not include PCB fabrication, an enclosure, keycaps, encoder knobs,
+or mounting hardware. Prices are planning numbers, not a final purchase quote.
 
 ## Repository Structure
 
 ```text
 Blip_hackpad/
 ├── BOM/                Bill of materials
-├── Images/             Schematic, PCB, and build pictures
+├── Images/             Schematic and PCB reference images
 ├── PCB/                KiCad design files and manufacturing outputs
 ├── docs/               Architecture, specifications, and validation evidence
 ├── src/
@@ -43,6 +43,26 @@ Blip_hackpad/
 │   ├── shared/         Device-event and semantic-state contracts
 │   └── simulator/      Virtual Blip Device and scenario CLI
 └── test/               Foundation acceptance tests
+```
+
+## Hardware submission status
+
+The KiCad project in `PCB/` is the hardware source of truth. Automated ERC,
+DRC, schematic-parity, source-policy, and BOM checks are recorded in
+`docs/hardware/`. The Hardware Validation Gate is not a manufacturing approval:
+I still need to inspect the current STEP export, confirm connector and encoder
+clearances with the real parts, review USB-C access, and sign the final
+manufacturing checklist in [`docs/hardware/hardware-change-guide.md`](./docs/hardware/hardware-change-guide.md).
+The complete repository-versus-Macondo checklist is in
+[`docs/hardware/macondo-submission-checklist.md`](./docs/hardware/macondo-submission-checklist.md).
+
+To rerun the repository checks:
+
+```sh
+sh scripts/verify-hardware-source-of-truth.sh
+sh scripts/verify-minimal-pcb-corrections.sh
+sh scripts/verify-bom-against-pcb.sh
+sh scripts/verify-hardware-validation-gate.sh
 ```
 
 ## Simulator tracer scenario
